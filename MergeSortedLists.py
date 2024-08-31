@@ -35,7 +35,35 @@ class Solution(object):
         # nums1=nums3[:]
         print(nums1)
         return
+    #o(m+n)time, o(1) space
+    def merge(self, nums1, m, nums2, n):
+        if m==0:
+            nums1[:]=nums2[:]
+            print(nums1)
+            return
+        elif n==0:
+            return
+        i=m+n-1
+        m-=1
+        n-=1
+        while(i>=0):
+            if m>=0 and n>=0:
+                if nums1[m]>nums2[n]:
+                    nums1[i]=nums1[m]
+                    m-=1
+                else:
+                    nums1[i]=nums2[n]
+                    n-=1
+            elif m<0:
+                nums1[i]=nums2[n]
+                n-=1
+            elif n<0:
+                nums1[i]=nums1[m]
+                m-=1
+            i-=1
+            print("nums1 {} m {} n {}".format(nums1,m,n))
 
 list1 = [1,2,3,0,0,0]
-list2 = [2,5,8]
+list2 = [2,5,6]
 #Solution().mergeBf(list1,3,list2,3)
+Solution().merge(list1,3,list2,3)
