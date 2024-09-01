@@ -12,11 +12,11 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        # start with index 1. let buy date & profit be 0
-        # if stock available for cheaper update buy date
-        # if profit of cur index greater than old profit, update profit
-        # old max profit remembered and updates buy to lower value after market crash
-        # return max profit
+# Solution : start with index 1. let buy date & profit be 0
+# if stock available for cheaper update buy date
+# if profit of cur index greater than old profit, update profit
+# old max profit remembered and updates buy to lower value after market crash
+# return max profit
         buy = prices[0]
         profit = 0
         for i in range(1, len(prices)):

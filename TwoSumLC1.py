@@ -11,13 +11,19 @@ def twoSum(nums, target):
 #     :type target: int
 #     :rtype: List[int]
 #     """
-# O(nsquare) - bruteforce
+# O(n sq) time O(1) space- bruteforce : walk through every number & try to find its complement by again looping through
 #     for i in range(len(nums)):
 #         for j in range(i+1,len(nums)):
 #             if (nums[i]+nums[j] == target):
 #                 print("i{} j{}".format(i,j))
 #             return [i,j]
-# O(n)
+
+# O(n) time O(n) space Solution:
+# create a dict -> which reverse maps the number to its Index.
+# loop through all numbers & keep adding to the dict & -> O(n)
+# for every new number check if complement exists in dictionary O(1)
+# (PS:we are not worried about hash collisions - as we dont care about the index/repetitions -
+# we just need to find the 2 nums that sum upto target
     numToIndex = {}
     for i in range(len(nums)):
         if (target-nums[i] in numToIndex):
