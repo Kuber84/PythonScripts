@@ -13,7 +13,7 @@ class Solution(object):
         :rtype: int
         """
 # Solution : start with index 1. let buy date & profit be 0
-# if stock available for cheaper update buy date
+# if stock available for cheaper update buy price
 # if profit of cur index greater than old profit, update profit
 # old max profit remembered and updates buy to lower value after market crash
 # return max profit
