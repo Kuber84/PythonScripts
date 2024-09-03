@@ -1,5 +1,5 @@
 class Solution(object):
-    def romanToInt(self, s):
+    def roman_to_int(self, s):
         """
         :type s: str
         :rtype: int
@@ -54,3 +54,4 @@ class Solution(object):
             else:
                 total+=denom[s[i]]
         return total
+print(Solution().roman_to_int('XXXIV'))
