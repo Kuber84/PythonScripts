@@ -54,4 +54,9 @@ class Solution(object):
             else:
                 total+=denom[s[i]]
         return total
+        # s = s.replace("IV", "IIII").replace("IX", "VIIII")
+        # s = s.replace("XL", "XXXX").replace("XC", "LXXXX")
+        # s = s.replace("CD", "CCCC").replace("CM", "DCCCC")
+        # for char in s:
+        #     total += denom[char]
 print(Solution().roman_to_int('XXXIV'))
